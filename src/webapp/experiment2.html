@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS基本样式实验 - 学生信息表格</title>
+  <style>
+    /* 全局样式 */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .main {
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+      margin-top: 0;
+    }
+
+    /* 文本标签样式 */
+    .label {
+      display: inline-block;
+      padding: 0 10px;
+      border-radius: 3px;
+      color: white;
+      font-size: 0.9em;
+      margin-right: 5px;
+    }
+
+    .label-success {
+      background-color: #27ae60;
+    }
+
+    .label-warning {
+      background-color: #f39c12;
+    }
+
+    /* 表格样式 */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 0.95em;
+    }
+
+    table th {
+      background-color: #3498db;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      border: 1px solid #2980b9;
+    }
+
+    table td {
+      text-align: center;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #f2f2f2;
+    }
+
+    tbody tr:hover {
+      background-color: #e3f2fd;
+    }
+
+    /* 按钮样式 */
+    .btn {
+      display: inline-block;
+      background-color: #e74c3c;
+      color: white;
+      padding: 6px 12px;
+      text-decoration: none;
+      border-radius: 8px;
+      margin: 0 3px;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #c0392b;
+      transform: translateY(-2px);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+      table {
+        font-size: 0.85em;
+      }
+
+      .btn {
+        padding: 4px 8px;
+        margin: 0 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="main">
+  <h3>学生信息</h3>
+  <p>说明：以下为2023级学生名单，共3人，
+    <span class="label label-success">成功加载3人</span>。
+    <span class="label label-warning">警告：列表不包含降级学生</span>。
+  </p>
+  <table>
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>姓名</th>
+      <th>班级</th>
+      <th>Email</th>
+      <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>1</td>
+      <td>施帅含</td>
+      <td>软件工程2046级1班</td>
+      <td>shi@example.com</td>
+      <td>
+        <a href="#" class="btn">修改</a>
+        <a href="#" class="btn">删除</a>
+      </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>黄英</td>
+      <td>软件工程2046级1班</td>
+      <td>huang@example.com</td>
+      <td>
+        <a href="#" class="btn">修改</a>
+        <a href="#" class="btn">删除</a>
+      </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>吕惠玲</td>
+      <td>软件工程2046级2班</td>
+      <td>lv@example.com</td>
+      <td>
+        <a href="#" class="btn">修改</a>
+        <a href="#" class="btn">删除</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>学生信息</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    [class*="col-"] {
+      padding: 0 10px;
+    }
+    .col-3 { width: 25%; }
+    .col-9 { width: 75%; }
+    .col-12 { width: 100%; }
+
+    .label {
+      display: inline-block;
+      border-radius: 3px;
+      padding: 0 5px;
+      color: #fff;
+      font-size: 14px;
+    }
+    .label-success { background-color: #27ae60; }
+    .label-warning { background-color: #f39c12; }
+
+    header {
+      background-color: #34495e;
+      padding: 10px;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+    }
+    .nav a {
+      color: #ecf0f1;
+      text-decoration: none;
+      margin-right: 15px;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    .nav a:hover {
+      background-color: #3c5d7a;
+    }
+    .nav .logout {
+      margin-left: auto;
+      color: #e74c3c;
+    }
+
+    aside {
+      background-color: #ecf0f1;
+      padding: 15px;
+      border-radius: 4px;
+    }
+    aside ul {
+      list-style: none;
+    }
+    aside li + li {
+      margin-top: 10px;
+    }
+    aside a {
+      color: #2c3e50;
+      text-decoration: none;
+      display: block;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    aside a:hover {
+      background-color: #bdc3c7;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      text-align: center;
+      padding: 10px;
+    }
+    tbody tr {
+      border-bottom: 1px solid #ddd;
+    }
+    tbody tr:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+
+    .btn-link {
+      display: inline-block;
+      background-color: #c0392b;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 14px;
+      line-height: 1;
+      transition: background-color 0.2s;
+    }
+    .btn-link:hover { background-color: #e74c3c; }
+
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #f4f4f4;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <header>
+        <nav class="nav">
+          <a href="#">首页</a>
+          <a href="#">学生管理</a>
+          <a href="#">课程管理</a>
+          <a href="#" class="logout">退出登录</a>
+        </nav>
+      </header>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-3">
+      <aside>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">学生信息</a></li>
+          <li><a href="#">成绩查询</a></li>
+          <li><a href="#">设置</a></li>
+        </ul>
+      </aside>
+    </div>
+    <div class="col-9">
+      <p>
+        说明：以下为 2046 级学生名单，共 4 人，
+        <span class="label label-success">成功加载 3 人</span>
+        <span class="label label-warning">警告：列表不包含降级学生</span>
+      </p>
+
+      <table>
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>姓名</th>
+          <th>班级</th>
+          <th>Email</th>
+          <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>1</td>
+          <td>施帅含</td>
+          <td>软件工程2046级1班</td>
+          <td>guo@example.com</td>
+          <td>
+            <a href="#" class="btn-link">修改</a>
+            <a href="#" class="btn-link">删除</a>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>黄英</td>
+          <td>软件工程2046级1班</td>
+          <td>huang@example.com</td>
+          <td>
+            <a href="#" class="btn-link">修改</a>
+            <a href="#" class="btn-link">删除</a>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>吕惠玲</td>
+          <td>软件工程2046级2班</td>
+          <td>lv@example.com</td>
+          <td>
+            <a href="#" class="btn-link">修改</a>
+            <a href="#" class="btn-link">删除</a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <footer>
+        &copy; 2025 软件工程系教务管理系统
+      </footer>
+    </div>
+  </div>
+</div>
+</body>
+</html>
